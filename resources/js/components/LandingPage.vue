@@ -39,7 +39,7 @@ $breakpoints: (
 
 @font-face {
     font-family: "Montserrat-Regular";
-    src: url("/portfolio/public/fonts/Montserrat-Medium.ttf");
+    src: url("/fonts/Montserrat-Medium.ttf");
 }
 
 .header {
@@ -48,7 +48,7 @@ $breakpoints: (
 }
 
 .parallax {
-  background-image: url("/portfolio/public/images/bg.jpg");
+  background-image: url("/images/bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
