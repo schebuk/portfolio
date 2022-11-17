@@ -39,6 +39,15 @@ export default {
   },
   data: () => ({"projects": [
               {
+                "title": "Admin PlanoLeads",
+                "content": "Admin feito em laravel e vue.js",
+                "link": "",
+                "image": "images/planolead.png",
+                "tag": "Full Stack",
+                "color": "red",
+                "date": "2022-10-10"
+              },
+              {
                 "title": "Johnson & Johnson Medtech",
                 "content": "Suporte em alteracoes e melhorias no site da Johnson & Johnson Medtech e empresas relacionadas<br><small>HTML, CSS, JavaScript, Jquery, PHP, Drupal, Lando, Jenkins, Git, GitFlow, SCRUM, Jira</small>",
                 "link": "",
