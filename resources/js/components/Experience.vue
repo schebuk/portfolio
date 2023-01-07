@@ -54,6 +54,11 @@ export default {
         "content": "<b>Análise e desenvolvimento de sistemas</b> <br />Faculdade Estácio de Sá"
         },
         {
+        "year": "2023",
+        "title": "Certificado PHP",
+        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/7d3ac100-8e4a-11ed-9234-5b33dd5de4e1' target='_blank'>Certificado</a>"
+        },
+        {
         "year": "2022",
         "title": "Testes unitários e TDD com PHP e PHPUnit",
         "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-f859d03d-0a91-4462-800a-fe858c3539a9/' target='_blank'>Certificado</a>"
