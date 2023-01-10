@@ -55,6 +55,16 @@ export default {
         },
         {
         "year": "2023",
+        "title": "Certificado GIT",
+        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/d98b42b0-9096-11ed-9234-ef241ef40bfd' target='_blank'>Certificado</a>"
+        },
+        {
+        "year": "2023",
+        "title": "Certificado Node.js",
+        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/19633e00-9093-11ed-9234-d721108b3c14' target='_blank'>Certificado</a>"
+        },
+        {
+        "year": "2023",
         "title": "Certificado PHP",
         "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/7d3ac100-8e4a-11ed-9234-5b33dd5de4e1' target='_blank'>Certificado</a>"
         },
