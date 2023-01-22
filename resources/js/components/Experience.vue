@@ -55,6 +55,21 @@ export default {
         },
         {
         "year": "2023",
+        "title": "Formação Node.js",
+        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-3d453919-48f1-4e53-a328-09b3cd16e993/' target='_blank'>Certificado</a>"
+        },
+        {
+        "year": "2023",
+        "title": "Computação em Nuvem | AWS Discovery Day",
+        "content": "Ka Solution<br /> <a href='Cert-AWS[1686].pdf' target='_blank'>Certificado</a>"
+        },
+        {
+        "year": "2023",
+        "title": "Microsoft Azure Fundamentals (AZ-900)",
+        "content": "Ka Solution<br /> <a href='Certificado.pdf' target='_blank'>Certificado</a>"
+        },
+        {
+        "year": "2023",
         "title": "Certificado GIT",
         "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/d98b42b0-9096-11ed-9234-ef241ef40bfd' target='_blank'>Certificado</a>"
         },

@@ -7,7 +7,7 @@
     <div class="data"><strong>Languages:</strong> Portugues e Ingles</div>
     <div class="data"><strong>Curriculo:</strong>
         <a href="Currículo-en.pdf" target="_blank"><font-awesome-icon class="icon_pdf" :icon="['fas', 'file-pdf']" /></a>EN
-        <a href="Currículo-ptbr.pdf" target="_blank"><font-awesome-icon class="icon_pdf" :icon="['fas', 'file-pdf']" /></a>PT-BR
+        <a href="Curriculo-ptbr.pdf" target="_blank"><font-awesome-icon class="icon_pdf" :icon="['fas', 'file-pdf']" /></a>PT-BR
     </div>
     <SocialBar/>
   </div>
