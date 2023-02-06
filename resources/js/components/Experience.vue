@@ -55,6 +55,11 @@ export default {
         },
         {
         "year": "2023",
+        "title": "Certificado Node.js",
+        "content": "Coodesh<br /> <a href=' https://coodesh.com/share/certificate/2fb699d0-a61a-11ed-9234-532f71ad5b8b' target='_blank'>Certificado</a>"
+        },
+        {
+        "year": "2023",
         "title": "Formação Node.js",
         "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-3d453919-48f1-4e53-a328-09b3cd16e993/' target='_blank'>Certificado</a>"
         },
