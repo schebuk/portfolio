@@ -2,11 +2,11 @@
   <div class="personal">
     <h3>Rafael Gomes Schebuk</h3>
     <div class="data"><strong>E-mail:</strong> rafael.schebuk@gmail.com</div>
-    <div class="data"><strong>Phone:</strong> +55 (41) 99979-4586</div>
-    <div class="data"><strong>City:</strong> Curitiba - PR - Brasil</div>
+    <div class="data"><strong>Telefone:</strong> +55 (41) 99979-4586</div>
+    <div class="data"><strong>Cidade:</strong> São Paulo - São Paulo - Brasil</div>
     <div class="data"><strong>Languages:</strong> Portugues e Ingles</div>
     <div class="data"><strong>Curriculo:</strong>
-        <a href="Currículo-en.pdf" target="_blank"><font-awesome-icon class="icon_pdf" :icon="['fas', 'file-pdf']" /></a>EN
+        <a href="Resume-en.pdf" target="_blank"><font-awesome-icon class="icon_pdf" :icon="['fas', 'file-pdf']" /></a>EN
         <a href="Curriculo-ptbr.pdf" target="_blank"><font-awesome-icon class="icon_pdf" :icon="['fas', 'file-pdf']" /></a>PT-BR
     </div>
     <SocialBar/>
