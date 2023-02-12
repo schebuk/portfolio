@@ -55,6 +55,11 @@ export default {
         },
         {
         "year": "2023",
+        "title": "SCRUM Overview",
+        "content": "Ka Solution<br /> <a href='Cert[1742].pdf' target='_blank'>Certificado</a>"
+        },
+        {
+        "year": "2023",
         "title": "Certificado Node.js",
         "content": "Coodesh<br /> <a href=' https://coodesh.com/share/certificate/2fb699d0-a61a-11ed-9234-532f71ad5b8b' target='_blank'>Certificado</a>"
         },
