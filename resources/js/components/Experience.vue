@@ -55,6 +55,11 @@ export default {
         },
         {
         "year": "2023",
+        "title": " Desenvolvimento Web Avançado com Vue (v2 e v3) e Vuex",
+        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-cf70b19d-254a-4ea1-9adf-db4d5658fec9/' target='_blank'>Certificado</a>"
+        },
+        {
+        "year": "2023",
         "title": "SCRUM Overview",
         "content": "Ka Solution<br /> <a href='Cert[1742].pdf' target='_blank'>Certificado</a>"
         },
