@@ -49,10 +49,16 @@ export default {
   data: () => ({
     "academico": [
         {
+        "year": "2024",
+        "title": " DevOps - Mão na massa!",
+        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-8902958f-4601-47fa-a718-b6502c55ed21/' target='_blank'>Certificado</a>"
+        },
+        {
         "year": "01/2020 - 06/2022",
         "title": "Ensino Superior Completo",
         "content": "<b>Análise e desenvolvimento de sistemas</b> <br />Faculdade Estácio de Sá"
         },
+        
         {
         "year": "2023",
         "title": " Desenvolvimento Web Avançado com Vue (v2 e v3) e Vuex",
