@@ -127,6 +127,11 @@ export default {
     ],
     "profissional": [
         {
+        "year": "20/11/2023 - 08/01/2024",
+        "title": "Desenvolvedor Full-Stack PHP Sênior<br/>Workana",
+        "content": "desenvolvimento full stack com Laravel angular PostgreSQL para o cliente ntask <br /><b>Tecnologias</b><br />PHP, Laravel 7, Laravel 10, PostgreSQL, Docker, Bitbucket, AngularJS"
+        },
+        {
         "year": "02/05/2022 - 18/07/2022",
         "title": "Programador de Sistemas de Informação<br/>CI&T Software",
         "content": "Desenvolvimento Fullstack com PHP, Drupal, Lando, Docker, Mysql, Jquery, Jenkins, GitFlow <br /><b>Tecnologias</b><br />MySQL Scrum, SQL, PHP, Drupal, Jenkins, GitFlow, Jira"

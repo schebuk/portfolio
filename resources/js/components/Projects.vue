@@ -39,6 +39,15 @@ export default {
   },
   data: () => ({"projects": [
               {
+                "title": "Ntask",
+                "content": "sistema de gerenciamento de processos para cartorios",
+                "link": "https://geo.ntask.app/#/autenticacao",
+                "image": "images/ntask.png",
+                "tag": "Full Stack",
+                "color": "red",
+                "date": "2024-01-08"
+              },
+              {
                 "title": "Admin PlanoLeads",
                 "content": "Admin feito em laravel e vue.js",
                 "link": "",

@@ -169,6 +169,10 @@
                 "title": "Azure",
                 "img": "images/azure.png"
               },
+              {
+                "title": "Angular",
+                "img": "images/angular.png"
+              },
             ]
         }),
     }
