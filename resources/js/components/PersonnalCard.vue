@@ -33,6 +33,9 @@ export default {
         margin-bottom: 15px;
     }
     .icon_pdf{
-      font-size: 2rem;
+      font-size: 1.5rem;
+    }
+    a{
+      color: #3c6e71;
     }
 </style>

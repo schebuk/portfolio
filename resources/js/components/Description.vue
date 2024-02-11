@@ -1,15 +1,12 @@
 <template>
     <section id="about">
-        <AnimateOnVisible name="fadeDown" :duration="1">
             <div class="title">
                 <h2>Sobre Mim</h2>
                 <div class="wrapper">
                     <div class="text-wrapper"></div>
                 </div>
             </div>
-        </AnimateOnVisible>
-
-        <AnimateOnVisible name="fadeRight" :duration="1">
+        
             <div class="section-content">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
@@ -25,7 +22,6 @@
                     </div>
                 </div>
             </div>
-        </AnimateOnVisible>
     </section>
 </template>
 

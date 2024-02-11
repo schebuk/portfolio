@@ -1,41 +1,41 @@
 <template>
   <section id="experience">
-    <AnimateOnVisible name="fadeDown" :duration="1">
-
+    <div v-animateonscroll="{ enterClass: 'fadeinleft', leaveClass: 'fadeoutleft' }" class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
         <div class="title">
-        <h2>Experiencias</h2>
-        <div class="wrapper">
-            <div class="text-wrapper"></div>
+          <h2>Experiencias</h2>
+          <div class="wrapper">
+              <div class="text-wrapper"></div>
+          </div>
         </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md left">
+            <h3 class="color-light">academico</h3>
+                <div class="resume-item" v-for="(post, index) in academico" :key="index">
+                <div class="year color-darker">{{ post.year }}</div>
+                <div class="resume-description">
+                    <strong class="color-light" v-html="post.title"></strong>
+                </div>
+                <div class="content color-darker">
+                  <span v-html="post.content"  class="link-style"></span>
+                </div>
+                </div>
         </div>
-    </AnimateOnVisible>
-
-	<AnimateOnVisible name="fadeUp" :duration="1">
-		<div class="container-fluid">
-			<div class="row">
-                <div class="col-12 col-md left">
-                    <h3 class="color-light">academico</h3>
-                        <div class="resume-item" v-for="(post, index) in academico" :key="index">
-                        <div class="year color-darker">{{ post.year }}</div>
-                        <div class="resume-description">
-                            <strong class="color-light" v-html="post.title"></strong>
-                        </div>
-                        <div class="color-darker" v-html="post.content"></div>
-                        </div>
-                </div>
-                <div class="col-12 col-md right">
-                    <h3 class="color-light  col-12 col-md right">Profissional</h3>
-                    <div class="resume-item" v-for="(post, index) in profissional" :key="index">
-                    <div class="year color-darker">{{ post.year }}</div>
-                    <div class="resume-description">
-                        <strong class="color-light" v-html="post.title"></strong>
-                    </div>
-                    <div class="color-darker" v-html="post.content"></div>
-                    </div>
-                </div>
-			</div>
-		</div>
-	</AnimateOnVisible>
+        <div class="col-12 col-md right">
+            <h3 class="color-light  col-12 col-md right">Profissional</h3>
+            <div class="resume-item" v-for="(post, index) in profissional" :key="index">
+            <div class="year color-darker">{{ post.year }}</div>
+            <div class="resume-description">
+                <strong class="color-light" v-html="post.title"></strong>
+            </div>
+            <div class="content color-darker">
+              <span v-html="post.content"></span>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -56,57 +56,57 @@ export default {
         {
         "year": "2024",
         "title": " DevOps - Mão na massa!",
-        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-8902958f-4601-47fa-a718-b6502c55ed21/' target='_blank'>Certificado</a>"
+        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-8902958f-4601-47fa-a718-b6502c55ed21/' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },        
         {
         "year": "2023",
         "title": " Desenvolvimento Web Avançado com Vue (v2 e v3) e Vuex",
-        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-cf70b19d-254a-4ea1-9adf-db4d5658fec9/' target='_blank'>Certificado</a>"
+        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-cf70b19d-254a-4ea1-9adf-db4d5658fec9/' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2023",
         "title": "SCRUM Overview",
-        "content": "Ka Solution<br /> <a href='Cert[1742].pdf' target='_blank'>Certificado</a>"
+        "content": "Ka Solution<br /> <a href='Cert[1742].pdf' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2023",
         "title": "Certificado Node.js",
-        "content": "Coodesh<br /> <a href=' https://coodesh.com/share/certificate/2fb699d0-a61a-11ed-9234-532f71ad5b8b' target='_blank'>Certificado</a>"
+        "content": "Coodesh<br /> <a href=' https://coodesh.com/share/certificate/2fb699d0-a61a-11ed-9234-532f71ad5b8b' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2023",
         "title": "Formação Node.js",
-        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-3d453919-48f1-4e53-a328-09b3cd16e993/' target='_blank'>Certificado</a>"
+        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-3d453919-48f1-4e53-a328-09b3cd16e993/' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2023",
         "title": "Computação em Nuvem | AWS Discovery Day",
-        "content": "Ka Solution<br /> <a href='Cert-AWS[1686].pdf' target='_blank'>Certificado</a>"
+        "content": "Ka Solution<br /> <a href='Cert-AWS[1686].pdf' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2023",
         "title": "Microsoft Azure Fundamentals (AZ-900)",
-        "content": "Ka Solution<br /> <a href='Certificado.pdf' target='_blank'>Certificado</a>"
+        "content": "Ka Solution<br /> <a href='Certificado.pdf' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2023",
         "title": "Certificado GIT",
-        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/d98b42b0-9096-11ed-9234-ef241ef40bfd' target='_blank'>Certificado</a>"
+        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/d98b42b0-9096-11ed-9234-ef241ef40bfd' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2023",
         "title": "Certificado Node.js",
-        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/19633e00-9093-11ed-9234-d721108b3c14' target='_blank'>Certificado</a>"
+        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/19633e00-9093-11ed-9234-d721108b3c14' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2023",
         "title": "Certificado PHP",
-        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/7d3ac100-8e4a-11ed-9234-5b33dd5de4e1' target='_blank'>Certificado</a>"
+        "content": "Coodesh<br /> <a href='https://coodesh.com/share/certificate/7d3ac100-8e4a-11ed-9234-5b33dd5de4e1' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2022",
         "title": "Testes unitários e TDD com PHP e PHPUnit",
-        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-f859d03d-0a91-4462-800a-fe858c3539a9/' target='_blank'>Certificado</a>"
+        "content": "Udemy<br /> <a href='https://www.udemy.com/certificate/UC-f859d03d-0a91-4462-800a-fe858c3539a9/' style='color:#3C6E71' target='_blank'>Certificado</a>"
         },
         {
         "year": "2001",
@@ -283,5 +283,9 @@ $linear: map-get($colors, dark);
 .color-darker {
   color: map-get($colors, dark);
 }
-</style>
+
+.link-style a{
+  color:#3c6e71 !important;
+  text-decoration: underline;
+}
 </style>

@@ -24,12 +24,16 @@
 <style scoped lang="scss">
      @import '../../../public/css/constants.scss';
  .social-wrap {
+   ul{
+    padding:0
+   }
     li {
       display: inline-block;
-      margin-right: 10px;
+      margin:0 10px 0 0;
     }
     .icon {
-      font-size: 3rem;
+      font-size: 2rem;      
+      color: #3c6e71;
     }
   }
 </style>

@@ -1,28 +1,25 @@
 <template>
     <section id="skills">
-        <AnimateOnVisible name="fadeDown" :duration="1">
-
-            <div class="title">
-                <h2>Conhecimento</h2>
-                <div class="wrapper">
-                    <div class="text-wrapper"></div>
-                </div>
-            </div>
-        </AnimateOnVisible>
-
-        <div class="section-content">
-            <div class="container-fluid">
-
-                <div class="row d-flex flex-wrap align-items-center">
-                    <div class="col-md-2 m-auto pb-4" v-for="(post, index) in skills" :key="index">
-                        <AnimateOnVisible name="bounce">
-                            <img id="imgLogo" class="img-responsive mx-auto d-block" :src="post.img" :alt="post.title"/>
-                            <div id="divAlt" class="altCaption text-center">{{post.title}}</div>
-                        </AnimateOnVisible>
-                    </div>
-                </div>
-            </div>
+      <div v-animateonscroll="{ enterClass: 'fadeinleft', leaveClass: 'fadeoutleft' }" class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
+        <div class="title">
+          <h2>Conhecimento</h2>
+          <div class="wrapper">
+            <div class="text-wrapper"></div>
+          </div>
         </div>
+      </div>
+      <div class="section-content">
+        <div class="container-fluid">
+          <div class="row d-flex flex-wrap align-items-center">
+            <div class="col-md-2 m-auto pb-4" v-for="(post, index) in skills" :key="index">
+              <div v-animateonscroll="{ enterClass: 'fadeinleft', leaveClass: 'fadeoutleft' }" class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
+                <img id="imgLogo" class="img-responsive mx-auto d-block" :src="post.img" :alt="post.title"/>
+                <div id="divAlt" class="altCaption text-center">{{post.title}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 </template>
 

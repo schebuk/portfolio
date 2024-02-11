@@ -2,13 +2,12 @@
   <header class="header parallax">
     <div class="name">
       <div class="wrapper-name">
-        <AnimateOnVisible name="fadeDown" ::duration="1">
+        
           <h1>Rafael Gomes Schebuk</h1>
-        </AnimateOnVisible>
         <hr />
-        <AnimateOnVisible name="fadeUp" ::duration="1">
+        
           <p>Desenvolvedor FullStack PHP/Node.js Sênior</p>
-        </AnimateOnVisible>
+        
       </div>
     </div>
   </header>
@@ -41,10 +40,14 @@ $breakpoints: (
     font-family: "Montserrat-Regular";
     src: url("/fonts/Montserrat-Medium.ttf");
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+}
 .header {
   padding: 20px;
   background-color: map-get($colors, dark);
+  height: 100vh;
 }
 
 .parallax {
@@ -53,7 +56,6 @@ $breakpoints: (
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
 }
 
 .name {

@@ -1,41 +1,79 @@
 <template>
   <section id="projects">
-    <AnimateOnVisible name="fadeDown" :duration="1">
-		<div class="title">
-                <h2>Projetos</h2>
-                <div class="wrapper">
-                    <div class="text-wrapper"></div>
-                </div>
+    <div v-animateonscroll="{ enterClass: 'fadeinleft', leaveClass: 'fadeoutleft' }" class="flex box shadow-4 justify-content-center align-items-center h-10rem w-10rem sm:h-15rem sm:w-15rem border-round animation-duration-1000 animation-ease-in-out">
+      <div class="title">
+        <h2>Projetos</h2>
+        <div class="wrapper">
+          <div class="text-wrapper"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid center-block timeline-left-align">
+      <article class="content">
+        <!-- Utilize o componente Timeline -->
+        <div class="p-timeline p-component p-timeline-left p-timeline-vertical" data-pc-name="timeline" data-pc-section="root">
+               
+          <!-- Itere sobre os projetos e exiba cada um deles -->
+          <div v-for="(project, index) in projects" :key="index" class="p-timeline-event">
+            <!-- Exiba a data na esquerda do marcador -->
+            <div class="p-timeline-event-oppositel">{{ calcularTempoDecorrido( new Date(project.date)) }}</div>
+            <div class="p-timeline-event-separator">
+              
+              <span class="marker" :style="{ borderColor: project.color }">
+                <i class="fas fa-code"></i>
+              </span>
+              
+              <div class="p-timeline-event-connector"></div>
             </div>
-    </AnimateOnVisible>
-
-    <div class="container-fluid center-block">
-      <article class="content text-center">
-
-		<AnimateOnVisible class="timeline mx-auto" v-for="(post, index) in projects" :key="index" name="fadeLeft" :duration="0.5">
-			<vue-timeline-update
-                :date="new Date(post.date)"
-                :title="post.title"
-                :description="post.content"
-                :thumbnail="post.image"
-                :color="post.color"
-                :category="post.tag"
-                icon="code"
-            />
-		</AnimateOnVisible>
+            <div class="p-timeline-event-content">
+               <span :style="'background-color: ' + project.color" class="tag">
+                  {{ project.tag }}</span>
+               <h2>{{ project.title }}</h2>
+              <div v-if="project.image" class="image-container">
+                <img :src="project.image" class="timeline-image" v-if="project.image" alt="Project Image">
+              </div>
+              <p v-html="project.content"></p>
+              <div v-if="project.link">
+                <a :href="project.link">Ver mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </article>
     </div>
   </section>
 </template>
 
 <script>
-
 export default {
   name: "Projects",
   props: ['content'],
   components: {
   },
   methods: {
+    getMarkerClass(color) {
+      return `marker marker-${color}`;
+    },
+    calcularTempoDecorrido(data){
+        const agora = new Date();
+        const diferenca = agora - data;
+
+        const segundos = Math.floor(diferenca / 1000);
+        const minutos = Math.floor(segundos / 60);
+        const horas = Math.floor(minutos / 60);
+        const dias = Math.floor(horas / 24);
+        const meses = Math.floor(dias / 30);
+        const anos = Math.floor(meses / 12);
+
+        if (anos > 0) {
+            return `${anos} ano${anos > 1 ? 's' : ''} atrás`;
+        } else if (meses > 0) {
+            return `${meses} mês${meses > 1 ? 'es' : ''} atrás`;
+        } else {
+            return 'Hoje';
+        }
+    },
   },
   data: () => ({"projects": [
               {
@@ -121,7 +159,7 @@ export default {
               },
               {
                 "title": "Veste a Camisa Cargill",
-                "content": "Alteraçõe no portal da campanha Veste a camisa Cargill<br /><small>PHP, Symfony, Git</small><br /> Link: <a href='https://vesteacamisacargill.com.br/#/' target='_blank'>vesteacamisacargill.com.br</a>",
+                "content": "Alteraçõe no portal da campanha Veste a camisa Cargill<br /><small>PHP, Symfony, Git</small>",
                 "link": "https://vesteacamisacargill.com.br/#/",
                 "image": "images/vesteacamisa.png",
                 "tag": "Simfony",
@@ -130,7 +168,7 @@ export default {
               },
               {
                 "title": "Gigantes em Campo Cargill",
-                "content": "Alteraçõe no portal da campanha Gigantes em Campo Cargill<br /><small>PHP, Symfony, Git</small><br/>Link: <a href='https://www.gigantesemcampocargill.com.br/#/' target='_blank'>gigantesemcampocargill.com.br</a>",
+                "content": "Alteraçõe no portal da campanha Gigantes em Campo Cargill<br /><small>PHP, Symfony, Git</small>",
                 "link": "https://www.gigantesemcampocargill.com.br/#/",
                 "image": "images/gigantes.png",
                 "tag": "Simfony",
@@ -139,7 +177,7 @@ export default {
               },
               {
                 "title": "SPTaxi",
-                "content": "Suporte e desenvovimento de novas funcoes para o app sptaxi e alguns portais de relatorios relacionados ao app<br /><small>Node.js, React, Git, Docker, MongoDb</small><br/>Links: <a href='https://play.google.com/store/apps/details?id=br.gov.sp.prefeitura.sptaxi.passenger&hl=en&gl=US' target='_blank'>SPTaxi Passageiro</a> - <a href='https://play.google.com/store/apps/details?id=br.gov.sp.prefeitura.sptaxi.driver&hl=en&gl=US' target='_blank'>SPTaxi Taxista</a>" ,
+                "content": "Suporte e desenvovimento de novas funcoes para o app sptaxi e alguns portais de relatorios relacionados ao app<br /><small>Node.js, React, Git, Docker, MongoDb</small>" ,
                 "link": "https://play.google.com/store/apps/details?id=br.gov.sp.prefeitura.sptaxi.driver&hl=en&gl=US",
                 "image": "images/sptaxi.webp",
                 "tag": "Node.js/React",
@@ -148,7 +186,7 @@ export default {
               },
               {
                 "title": "Hotsite Campanha Bem Pensado Consul",
-                "content": "suporte e aplicacao das regras da campanha do Hotsite com sistema de cashback da Consul<br /><small>Yii2, Mysql</small><br/>Link: <a href='https://folia.bempensadoconsul.com.br' target='_blank'>bempensadoconsul.com.br</a>" ,
+                "content": "suporte e aplicacao das regras da campanha do Hotsite com sistema de cashback da Consul<br /><small>Yii2, Mysql</small>" ,
                 "link": "https://folia.bempensadoconsul.com.br",
                 "image": "",
                 "tag": "Yii2",
@@ -157,7 +195,7 @@ export default {
               },
               {
                 "title": "Econet",
-                "content": "Suporte e desenvovimento de novas internas de simuladores de tarifação empresarial<br /><small>Laravel, Vue.js, Mysql, Git, Scrum</small><br/>Links: <a href='http://www.econeteditora.com.br' target='_blank'>econeteditora.com.br</a>" ,
+                "content": "Suporte e desenvovimento de novas internas de simuladores de tarifação empresarial<br /><small>Laravel, Vue.js, Mysql, Git, Scrum</small>" ,
                 "link": "http://www.econeteditora.com.br",
                 "image": "images/econet.png",
                 "tag": "Laravel/Vue.js",
@@ -166,20 +204,20 @@ export default {
               },
               {
                 "title": "Gere o seu Momento -  Hondashi",
-                "content": "Backend da funcionalidade de indicação de receita de acordo com as respostas do usuario<br /><small>Synfony</small><br />Link: <a href='https://www.hondashi.com.br/#' target='_blank'>hondashi.com.br</a>" ,
+                "content": "Backend da funcionalidade de indicação de receita de acordo com as respostas do usuario<br /><small>Synfony</small>" ,
                 "link": "https://www.hondashi.com.br/#",
                 "image": "images/hondashi.png",
                 "tag": "Synfony",
-                "color": "white",
+                "color": "purple",
                 "date": "2015-11-04"
               },
               {
                 "title": "Aji-no-moto",
-                "content": "Funcionalidade de exibição de receitas redirecionando para o <br /><small>PHP, MySQL, CSS, Javascrpt</small><br/> Link: <a href='https://www.aji-no-moto.com.br/receitas-umami/' target='_blank'>aji-no-moto.com.br</a> " ,
+                "content": "Funcionalidade de exibição de receitas redirecionando para o <br /><small>PHP, MySQL, CSS, Javascrpt</small>" ,
                 "link": "https://www.aji-no-moto.com.br/receitas-umami/",
                 "image": "images/ajinomoto.png",
                 "tag": "Synfony",
-                "color": "white",
+                "color": "purple",
                 "date": "2015-11-04"
               },
               {
@@ -206,7 +244,7 @@ export default {
                 "link": "",
                 "image": "",
                 "tag": "Symfony",
-                "color": "white",
+                "color": "purple",
                 "date": "2014-11-04"
               },
               {
@@ -273,11 +311,90 @@ article .inner {
 
 .vertical-center {
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 h1 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+  .project {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  }
+  .timeline-left-align {
+      text-align: left;
+  }
+  .left {
+    display: flex;
+    align-items: left;
+  }
+
+  .right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  .marker {
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    width: 50px; /* Define a largura fixa do marcador */
+    height: 50px; /* Define a altura fixa do marcador */
+    padding: 3px 5px;
+    border-radius: 50%; /* Torna o marcador circular */
+    color: white; /* Define a cor do texto do marcador */
+    display: inline-block;
+    border-radius: 50px; /* ajuste conforme necessário */
+    border: 5px solid #fff; /* adiciona uma borda */
+  }
+
+  .marker-red {
+    background-color: red; /* Define a cor de fundo do marcador */
+  }
+  .image-container {
+    width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Defina a altura máxima da imagem conforme necessário */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse as dimensões do contêiner */
+  }
+  
+  .image-container img {
+    width: 100%;
+  }
+  .tag {
+    display: inline-block;
+    padding: 10px 10px; /* ajuste conforme necessário */
+    border-radius: 25px; /* ajuste conforme necessário */
+    color: white; /* cor do texto */
+    border: 5px solid #fff; /* adiciona uma borda */
+    float: left;
+    margin-right: 10px;
+  }
+  .p-timeline-event-content{
+    width: 45%;
+  }
+  .p-timeline-event-content h2{
+     padding: 5px 0 0 10px;
+     font-size: 1.5em;
+     line-height: 2em;
+    
+  }
+  .p-timeline-event{
+    width: 90%;
+    padding:0 5%;
+  }
+  .p-timeline-event-oppositel{
+    width: 110px;
+    text-align: right;
+    padding: 10px 10px 0 0;
+  }
 </style>

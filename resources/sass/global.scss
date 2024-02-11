@@ -1,5 +1,4 @@
 @import './constants';
-@import './animation.scss';
 
 body,
 html {
@@ -39,26 +38,16 @@ ul {
 }
 
 a {
-  color: map-get($colors, secondary);
+  color: #3C6E71;
 
   &:hover {
-    color: map-get($colors, dark);
+    color:  #D9D9D9;
     text-decoration: none;
   }
 }
 
 li {
   margin-bottom: 10px;
-}
-
-.timeline {
-  @media (max-width: #{map-get($breakpoints, medium)}) {
-    width: 100%;
-  }
-
-  @media (min-width: #{map-get($breakpoints, medium)}) {
-    width: 60%
-  }
 }
 
 [class^="gb-"]:not(.gb-base-icon) {

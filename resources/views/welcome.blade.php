@@ -8,11 +8,9 @@
 
     </head>
     <body>
-        <transition name="fade" tag="div" class="wrapper" mode="out-in">
-            <div class="wrapper" id="app">
-                <app></app>
-            </div>
-        </transition>
+        <div class="wrapper" id="app">
+            <app></app>
+        </div>
         <script src="{{ asset('js/app.js')}}"></script>
     </body>
 </html>
