@@ -36,9 +36,7 @@ export default {
         password: this.password
       })
       .then(response => {
-        console.log(response.status);
         if (response.status === 200) {
-          console.log(response.data.token);
           localStorage.setItem('token', response.data.token);
           this.$router.push('/admin'); // Redireciona para a rota /admin
         } else {
