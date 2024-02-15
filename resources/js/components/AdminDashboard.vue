@@ -2,13 +2,19 @@
     <div class="admin-dashboard">
       <h2>Dashboard do Admin</h2>
       <p>Bem-vindo ao painel de administração!</p>
-      <router-link to="/admin/logout">Logout</router-link>
+      <button @click="logout">Logout</button>
     </div>
   </template>
   
   <script>
   export default {
     name: 'AdminDashboard',
+    methods: {
+      logout() {
+        localStorage.removeItem('token');
+        this.$router.push('/admin/login');
+      }
+    }
   };
   </script>
   

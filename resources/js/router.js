@@ -1,4 +1,3 @@
-// src/router.js
 import Vue from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './components/Home.vue'; 
@@ -29,20 +28,21 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    // Verifica se a rota ou qualquer rota filha requer autenticação
-    if (to.matched.some(record => record.meta.requiresAuth)) {
-      // Verifica se o usuário está autenticado no Laravel
-      if (!window.AuthUser) {
-        // Se o usuário não estiver autenticado, redireciona para a página de login
-        next('/admin/login');
-      } else {
-        // Se o usuário estiver autenticado, permite a navegação
-        next();
-      }
+  // Verifica se a rota ou qualquer rota filha requer autenticação
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // Verifica se o token está armazenado no localStorage
+    const token = localStorage.getItem('token');
+    if (!token) {
+      // Se o token não estiver presente, redireciona para a página de login
+      next('/admin/login');
     } else {
-      // Se a rota não requer autenticação, permite a navegação
+      // Se o token estiver presente, permite a navegação
       next();
     }
-  });
+  } else {
+    // Se a rota não requer autenticação, permite a navegação
+    next();
+  }
+});
 
 export default router;

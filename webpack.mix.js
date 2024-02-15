@@ -11,7 +11,12 @@ const webpack = require('webpack');
  | file for the application as well as bundling up all the JS files.
  |
  */
- mix.webpackConfig({
+ mix.webpackConfig({ 
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'resources/js'),
+      },
+    },
     plugins: [
       new webpack.DefinePlugin({
         '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': false
